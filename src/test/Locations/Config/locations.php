@@ -15,7 +15,7 @@ return [
     */
 
     'curl' => [
-        'url' => 'https://github.com/vbushuev/get.locations/test/localtions.json',
+        'url' => 'https://github.com/vbushuev/get.locations/blob/master/tests/locations.json',
         'headers' => []
     ],
 
