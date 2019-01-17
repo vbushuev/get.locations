@@ -1,5 +1,4 @@
 <?php  namespace vsb\Locations;
-use Log;
 use vsb\Locations\Exceptions\Exception as LocationException;
 class LocationManager {
     public function handle(){
@@ -10,8 +9,6 @@ class LocationManager {
     protected function import(){
         $headers = config('locations.curl.header');
         $url = config('locations.curl.url');
-        Log::debug('LocationsManager url='.$url);
-        Log::debug('LocationsManager headers='.json_encode($headers));
         $ch = curl_init();
         $chOpts = [
             CURLOPT_SSL_VERIFYPEER=>false,
@@ -20,9 +17,11 @@ class LocationManager {
             CURLOPT_RETURNTRANSFER=>true,
             CURLOPT_CONNECTTIMEOUT =>8,
             CURLOPT_TIMEOUT => 16,
-            CURLOPT_HTTPHEADER=>$headers,
             CURLOPT_URL=>$url
         ];
+        if( !is_null($headers) && is_array($headers) && count($headers) ){
+            $chOpts[CURLOPT_HTTPHEADER]=$headers;
+        }
         curl_setopt_array($ch, $chOpts);
         $response = curl_exec($ch);
         $errno = curl_errno();
