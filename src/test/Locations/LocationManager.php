@@ -24,11 +24,11 @@ class LocationManager {
         }
         curl_setopt_array($ch, $chOpts);
         $response = curl_exec($ch);
-        $errno = curl_errno();
+        $errno = curl_errno($ch);
         $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
-        if($errno)throw new LocationException(curl_error(),$errno);
+        if($errno)throw new LocationException(curl_error($ch),$errno);
         if($httpcode<200 || $httpcode>=400) throw new LocationException('HTTP error response', $httpcode);
         $header = substr($response, 0, $header_size);
         $content = substr($response, $header_size);
