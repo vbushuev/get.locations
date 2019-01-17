@@ -2,7 +2,7 @@
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 use vsb\Locations\LocationManager;
 
-class ServiceProvider extends LaravelServiceProvider
+class LocationServiceProvider extends LaravelServiceProvider
 {
     // Delay initializing this service for good performance
     protected $defer = true;

@@ -20,7 +20,7 @@
         "laravel/framework": "5.5.x"
     },
     "autoload": {
-        
+
         "psr-4": {
             "vsb\\Locations\\": "src/test/aLocations/"
         }
@@ -41,10 +41,10 @@
         },
         "laravel": {
             "providers": [
-                "vsb\\Locations\\ServiceProvider"
+                "vsb\\Locations\\LocationServiceProvider"
             ],
             "aliases": {
-                "Locations": "vsb\\Loations\\Facade"
+                "Locations": "vsb\\Locations\\Facade"
             }
         }
     }
