@@ -20,9 +20,7 @@
         "laravel/framework": "5.5.x"
     },
     "autoload": {
-        "files": [
-            "src/helpers.php"
-        ],
+        
         "psr-4": {
             "vsb\\Locations\\": "src/test/aLocations/"
         }
