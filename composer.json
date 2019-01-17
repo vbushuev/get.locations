@@ -1,0 +1,53 @@
+{
+    "name": "vsb/locations",
+    "description": "The test implement",
+    "keywords": ["test", "laravel", "Locations"],
+    "homepage": "https://github.com/vbushuev",
+    "support": {
+        "issues": "https://github.com/vbushuev/get.location/issues",
+        "source": "https://github.com/vbushuev/get.location"
+    },
+    "authors": [
+        {
+            "name": "Vladimir Bushuev",
+            "email": "v.bushuev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+    },
+    "require-dev": {
+        "laravel/framework": "5.5.x"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "vsb\\Locations\\": "src/test/aLocations/"
+        }
+    },
+    "autoload-dev": {
+        "files": [
+            "tests/fake.php"
+        ],
+        "psr-4": {
+            "Illuminate\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "vsb\\Locations\\ServiceProvider"
+            ],
+            "aliases": {
+                "Locations": "vsb\\Loations\\Facade"
+            }
+        }
+    }
+}
