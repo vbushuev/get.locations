@@ -20,6 +20,9 @@ class LocationServiceProvider extends LaravelServiceProvider
     public function register()
     {
         // Register Locations as service
+        $this->app->bind('vsb\Locations\LocationManager', function ($app) {
+            return new LocationManager($app);
+        });
         $this->app->singleton('test.locations', function ($app) {
             return new LocationManager($app);
         });
