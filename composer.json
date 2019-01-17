@@ -22,7 +22,7 @@
     "autoload": {
 
         "psr-4": {
-            "vsb\\Locations\\": "src/test/Locations/"
+            "vsb\\": "src/test/"
         }
     },
     "autoload-dev": {
@@ -30,7 +30,7 @@
             "tests/fake.php"
         ],
         "psr-4": {
-            "Illuminate\\Tests\\": "tests/"
+            "vsb\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "dev",
