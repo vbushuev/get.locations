@@ -1,6 +1,6 @@
 <?php  namespace vsb\Locations;
 use vsb\Locations\Exceptions\Exception as LocationException;
-Log;
+use Log;
 class LocationManager {
     public function handle(){
         $content = $this->import();
