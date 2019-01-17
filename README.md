@@ -78,3 +78,6 @@ JSON error response format
 <p>
     To change URL use config/locations.php ( first publish that by <code>php artisan vendor:publish </code>)
 </p>
+<p>
+    Last one for test suite you can use https://github.com/vbushuev/get.locations.laravel.test (All staff upper already done)
+</p>
