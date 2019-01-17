@@ -1,5 +1,6 @@
 <?php  namespace vsb\Locations;
 use vsb\Locations\Exceptions\Exception as LocationException;
+Log;
 class LocationManager {
     public function handle(){
         $content = $this->import();
@@ -39,8 +40,8 @@ class LocationManager {
         $jsonCode = json_last_error();
         // Let's do checks
         if($jsonCode!=JSON_ERROR_NONE) throw new LocationException('JSON:'.json_last_error_msg(),$jsonCode);
-        if(!isset($respose->success)) throw new LocationException('RESPONSE: Incorrect JSON format',500);
-        if(!$respose->success) throw new LocationException('Response:'.(isset($response->data) && isset($response->data->message))?$response->data->message:'no error response message',(isset($response->data) && isset($response->data->code))?$response->data->code:-500);
+        if(!isset($response->success)) throw new LocationException('RESPONSE: Incorrect JSON format',500);
+        if(!$response->success) throw new LocationException('Response:'.(isset($response->data) && isset($response->data->message))?$response->data->message:'no error response message',(isset($response->data) && isset($response->data->code))?$response->data->code:-500);
     }
 };
 ?>
