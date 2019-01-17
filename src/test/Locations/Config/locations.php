@@ -15,7 +15,7 @@ return [
     */
 
     'curl' => [
-        'url' => 'http://localhost/locations',
+        'url' => 'https://github.com/vbushuev/get.locations/test/localtions.json',
         'headers' => []
     ],
 
