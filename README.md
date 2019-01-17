@@ -79,5 +79,5 @@ JSON error response format
     To change URL use config/locations.php ( first publish that by <code>php artisan vendor:publish </code>)
 </p>
 <p>
-    Last one for test suite you can use https://github.com/vbushuev/get.locations.laravel.test (All staff upper already done)
+    Last one for test suite you can use https://github.com/vbushuev/get.locations.laravel.test (All staff upper already done). You can clone that project, <code>composer update</code>, <code> php artisan serve</code>  and go in your favorite browser to http://127.0.0.1:8000/test.
 </p>
