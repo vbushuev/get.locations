@@ -22,7 +22,7 @@
     "autoload": {
 
         "psr-4": {
-            "vsb\\Locations\\": "src/test/aLocations/"
+            "vsb\\Locations\\": "src/test/Locations/"
         }
     },
     "autoload-dev": {
