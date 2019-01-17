@@ -46,3 +46,35 @@ JSON error response format
 </code>
 </pre>
 </p>
+
+<h3>How to use my implementation</h3>
+<ol>
+    <li>
+        Add my git repository locations in your laravel composer.json
+        <pre>
+        ...
+        "repositories":[
+            {
+                "type":"git",
+                "url":"https://github.com/vbushuev/get.locations"
+            }
+        ]
+        ...
+        </pre>
+    </li>
+    <li> Execute command <pre>composer require composer require vsb/locations</pre></li>
+</ol>
+<p>
+    Thats all.
+    Only one public method
+    <pre>
+    use vsb\Locations\LocationManager;
+    ...
+    $locations = $locations->handle();
+    ...
+    </pre>
+    That returns std::class object of locations getted from https://raw.githubusercontent.com/vbushuev/get.locations/master/tests/locations.json
+</p>
+<p>
+    To change URL use config/locations.php ( first publish that by <code>php artisan vendor:publish </code>)
+</p>
