@@ -1,0 +1,28 @@
+{
+    "data": {
+        "locations": [
+            {
+                "name": "Eiffel Tower",
+                "coordinates": {
+                    "lat": 21.12,
+                    "long": 19.56
+                }
+            },
+            {
+                "name": "Cremlin",
+                "coordinates": {
+                    "lat": 38.12,
+                    "long": 44.56
+                }
+            },
+            {
+                "name": "State of freedom",
+                "coordinates": {
+                    "lat": 31.12,
+                    "long": -19.56
+                }
+            }
+        ]
+    },
+    "success": true
+}
