@@ -7,8 +7,8 @@ class LocationManager {
         return $response->data->locations;
     }
     protected function import(){
-        $headers = config('locations.header');
-        $url = config('locations.url');
+        $headers = config('locations.curl.header');
+        $url = config('locations.curl.url');
         $ch = curl_init();
         $chOpts = [
             CURLOPT_SSL_VERIFYPEER=>false,
